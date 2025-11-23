@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c18p1k4vbfu2r"]
+
+[ext_resource type="PackedScene" uid="uid://bdtmawcam0fxb" path="res://assets/bowling_pin2/bowling_pin2.glb" id="1_y04h4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a61yh"]
+size = Vector3(0.122086, 0.385605, 0.124695)
+
+[node name="BowlingPin" type="Node3D"]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+contact_monitor = true
+
+[node name="bowling_pin2" parent="RigidBody3D" instance=ExtResource("1_y04h4")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.39233e-05, 0.191002, -3.05176e-05)
+shape = SubResource("BoxShape3D_a61yh")

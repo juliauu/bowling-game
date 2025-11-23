@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddpwfhg6cso7v"]
+
+[ext_resource type="PackedScene" uid="uid://bs8i48j01a4ox" path="res://scenes/BowlingLane.tscn" id="1_6w2j6"]
+[ext_resource type="PackedScene" uid="uid://c18p1k4vbfu2r" path="res://scenes/BowlingPin.tscn" id="2_ogoca"]
+
+[node name="Game" type="Node3D"]
+
+[node name="BowlingLane" parent="." instance=ExtResource("1_6w2j6")]
+
+[node name="BowlingPin" parent="." instance=ExtResource("2_ogoca")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, -6.88306)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.738007, -4.63747)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.37725, -7.71942)
+light_energy = 0.839
